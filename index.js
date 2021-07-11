@@ -24,9 +24,13 @@ db.once('open', function() {
 /**Fin conexion DB */
 
 /**Rutas Servicios */
-const registroForm = require('./funcionalidad/rutas/registroForm');
+const Egreso = require('./funcionalidad/rutas/egreso');
 
-router.use('/registroForm',registroForm);
+router.use('/egreso',Egreso);
+
+const Usuario = require('./funcionalidad/rutas/usuario');
+
+router.use('/usuario',Usuario);
 
 
 
@@ -37,7 +41,7 @@ router.get('/', (req, res) => {
 
 /** Fin rutas */
 
-app.use('/backend-doscampos', router)
+app.use('/backend-prueba', router)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
