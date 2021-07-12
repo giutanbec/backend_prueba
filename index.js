@@ -41,7 +41,7 @@ router.get('/', (req, res) => {
 
 /** Fin rutas */
 
-app.use('/backend-prueba', router)
+app.use('/api-backend-prueba', router)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
