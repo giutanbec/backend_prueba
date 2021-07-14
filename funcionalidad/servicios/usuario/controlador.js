@@ -21,7 +21,7 @@ const obtenerUsuario = async (req, res) =>{
     try {
         let respuesta = await logicaDB.obtenerUsuarioDB(usuario);
         res.status(200).json({
-            'usuario': respuesta
+            'usuarios': respuesta
         });
         return;
     } catch (error) {
@@ -30,7 +30,7 @@ const obtenerUsuario = async (req, res) =>{
        });
        return;
     }
-}
+};
 
 module.exports = {
     crearUsuario,
