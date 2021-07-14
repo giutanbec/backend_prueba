@@ -32,9 +32,26 @@ const obtenerEgreso = async (req, res) =>{
        });
        return;
     }
-}
+};
+
+const obtenerEgresoporUsuario = async (req, res) =>{
+    let egreso = req.body;
+    try {
+        let respuesta = await logicaDB.obtenerEgresoporUsuarioDB(egreso);
+        res.status(200).json({
+            'egresos_usuario': respuesta
+        });
+        return;
+    } catch (error) {
+       res.status(500).json({
+           error
+       });
+       return;
+    }
+};
 
 module.exports = {
  crearEgreso,
- obtenerEgreso
+ obtenerEgreso,
+ obtenerEgresoporUsuario
 }

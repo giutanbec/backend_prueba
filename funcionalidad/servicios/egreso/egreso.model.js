@@ -8,7 +8,7 @@ const Egreso = new Schema({
     type: Schema.ObjectId,
     ref: 'Usuario',
     default: null
-    }
+}
 });
 
 module.exports = mongoose.model('Egreso', Egreso)
