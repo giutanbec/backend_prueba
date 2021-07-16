@@ -12,13 +12,15 @@ const obtenerEgresoDB = async () => {
 }
 
 const obtenerEgresoporUsuarioDB = async () => {
-    let respuesta = await Egreso.find();
-    return respuesta;
+    let respuesta = await Egreso.find({'estado': true}).sort({id_egreso:-1});   
+    return respuesta; 
 }
+
 
 /** Exportar consultas */
 module.exports = { 
     crearEgresoDB,
     obtenerEgresoDB,
     obtenerEgresoporUsuarioDB,
+    //eliminarEgresoDB
 }

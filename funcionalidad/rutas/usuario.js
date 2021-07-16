@@ -4,5 +4,6 @@ const controlador = require('../servicios/usuario/controlador');
 
 router.post('/crear-usuario',controlador.crearUsuario);
 router.get('/obtener-usuarios',controlador.obtenerUsuario);
+//router.delete('/eliminar-usuario',controlador.eliminarUsuario);
 
 module.exports = router;

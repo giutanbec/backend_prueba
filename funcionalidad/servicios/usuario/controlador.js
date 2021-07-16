@@ -34,5 +34,6 @@ const obtenerUsuario = async (req, res) =>{
 
 module.exports = {
     crearUsuario,
-    obtenerUsuario
+    obtenerUsuario,
+    //eliminarUsuario,
 }

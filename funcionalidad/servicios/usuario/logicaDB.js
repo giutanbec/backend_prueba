@@ -15,4 +15,5 @@ const obtenerUsuarioDB = async () => {
 module.exports = { 
     crearUsuarioDB,
     obtenerUsuarioDB,
+    //eliminarUsuarioDB
 }
