@@ -57,11 +57,11 @@ const obtenerEgresoporUsuario = async (req, res) =>{
 const eliminarEgreso = async (req, res) =>{
     let _id = req.params._id;
     console.log(id)
-    _id.delete(_id.id)
+    _id.deleteOne(_id.id)
     try {
-        let respuesta = await logicaDB.eliminarEgreso({ where:{id: eliminarEgreso.id}})
+        let respuesta = await logicaDB.eliminarUsuario({ where:{id: eliminarUsuario.id}})
         res.status(200).json ({
-            'eliminar-egreso': respuesta
+            'eliminar-usuario': respuesta
         });
         return;
     } catch (error) {

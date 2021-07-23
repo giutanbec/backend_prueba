@@ -35,7 +35,7 @@ const obtenerUsuario = async (req, res) =>{
 const eliminarUsuario = async (req, res) =>{
     let _id = req.params._id;
     console.log(id)
-    _id.delete(_id.id)
+    _id.deleteOne(_id.id)
     try {
         let respuesta = await logicaDB.eliminarUsuario({ where:{id: eliminarUsuario.id}})
         res.status(200).json ({
