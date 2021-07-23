@@ -32,8 +32,29 @@ const obtenerUsuario = async (req, res) =>{
     }
 };
 
+const eliminarUsuario = async (req, res) =>{
+    let _id = req.params._id;
+    console.log(id)
+    _id.delete(_id.id)
+    try {
+        let respuesta = await logicaDB.eliminarUsuario({ where:{id: eliminarUsuario.id}})
+        res.status(200).json ({
+            'eliminar-usuario': respuesta
+        });
+        return;
+    } catch (error) {
+       res.status(500).json({
+           error
+       });
+       return;
+    }
+};
+
+
+//REVISAR
+
 module.exports = {
     crearUsuario,
     obtenerUsuario,
-    //eliminarUsuario,
+    eliminarUsuario,
 }

@@ -54,9 +54,29 @@ const obtenerEgresoporUsuario = async (req, res) =>{
 
 
 
+const eliminarEgreso = async (req, res) =>{
+    let _id = req.params._id;
+    console.log(id)
+    _id.delete(_id.id)
+    try {
+        let respuesta = await logicaDB.eliminarEgreso({ where:{id: eliminarEgreso.id}})
+        res.status(200).json ({
+            'eliminar-egreso': respuesta
+        });
+        return;
+    } catch (error) {
+       res.status(500).json({
+           error
+       });
+       return;
+    }
+};
+
+//REVISAR
+
 module.exports = {
  crearEgreso,
  obtenerEgreso,
  obtenerEgresoporUsuario,
- //eliminarEgreso,
+ eliminarEgreso,
 }

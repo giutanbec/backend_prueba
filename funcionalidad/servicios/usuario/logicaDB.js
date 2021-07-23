@@ -11,9 +11,19 @@ const obtenerUsuarioDB = async () => {
     return respuesta;
 }
 
+
+//REVISAR
+const eliminarUsuarioDB = async (_id) => {
+    let respuesta = await Usuario.deleteOne({ _id:'60ec5e72391a523cc4208d5b'});  
+    return respuesta; 
+}
+
+
+//REVISAR
+
 /** Exportar consultas */
 module.exports = { 
     crearUsuarioDB,
     obtenerUsuarioDB,
-    //eliminarUsuarioDB
+    eliminarUsuarioDB
 }
